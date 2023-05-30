@@ -10,7 +10,7 @@ const BadReqErr = require('../errors/BadReqError');
 const NotFoundErr = require('../errors/NotFoundErr');
 const ForbidErr = require('../errors/ForbidErr');
 
-module.exports.getMovies = (req, res, next) => {
+const getMovies = (req, res, next) => {
   const userId = req.user.id;
   Movie.find({ owner: userId })
     .then((movie) => res.send(movie))
@@ -56,7 +56,7 @@ function createMovie(req, res, next) {
     });
 }
 
-module.exports.deleteMovie = (req, res, next) => {
+const deleteMovie = (req, res, next) => {
   const userId = req.user.id;
   const { movieId } = req.params;
   Movie.findById(movieId)
@@ -77,4 +77,4 @@ module.exports.deleteMovie = (req, res, next) => {
       }
     });
 };
-module.exports = { createMovie };
+module.exports = { createMovie, deleteMovie, getMovies };

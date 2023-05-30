@@ -1,4 +1,4 @@
-const EMAIL_ERR = require('../utils/constans');
+const { EMAIL_ERR } = require('../utils/constans');
 
 class ConflictErr extends Error {
   constructor(message) {

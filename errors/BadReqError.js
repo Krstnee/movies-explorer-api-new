@@ -1,4 +1,4 @@
-const BAD_REQ = require('../utils/constans');
+const { BAD_REQ } = require('../utils/constans');
 
 class BadReqErr extends Error {
   constructor(message) {
