@@ -1,0 +1,22 @@
+module.exports.BAD_REQ = 400;
+module.exports.AUTH_ERR = 401;
+module.exports.FORBIDDEN = 403;
+module.exports.NOT_FOUND = 404;
+module.exports.EMAIL_ERR = 409;
+module.exports.DEF_ERR = 500;
+
+module.exports.MONGO_URL_DEV = 'mongodb://localhost:27017/moviesdb';
+module.exports.JWT_SECRET_DEV = 'dev-secret';
+module.exports.AUTH_ERR_MES = 'Необходимо авторизироваться';
+module.exports.AUTH_SUCC_MES = 'Вы успешно авторизировались';
+module.exports.BAD_EMAIL_MES = 'Неверный формат почты';
+module.exports.BAD_DATA_MES = 'Неправильный пароль или логин';
+module.exports.CONFLICT_ERR_MES = 'Пользователь с такой почтой уже зарегистрирован';
+module.exports.FORBIDDEN_ERR_MES = 'Можно удалить только свой фильм';
+module.exports.VALID_ERR_MES = 'Переданы некорректные данные';
+module.exports.BAD_URL_MES = 'Неверный формат ссылки';
+module.exports.NONE_SAVED_FILMS_MES = 'Сохраненные фильмы не найдены';
+module.exports.FILM_NOT_FOUND = 'Фильм не найден';
+module.exports.PAGE_NOT_FOUND = 'Страница не найдена';
+module.exports.USER_NOT_FOUND = 'Пользователь не найден';
+module.exports.REGEX = /^((ftp|http|https):\/\/)?(www\.)?([A-Za-zА-Яа-я0-9]{1}[A-Za-zА-Яа-я0-9-]*\.?)*\.{1}[A-Za-zА-Яа-я0-9-]{2,8}(\/([\w#!:.?+=&%@!\-/])*)?/;
