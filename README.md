@@ -2,4 +2,5 @@
 
 Адрес бэкенда - http://api.krstnee.nomoredomains.work/
 
-ip адрес - 51.250.76.199 
+ip адрес - 158.160.50.106
+

@@ -4,7 +4,7 @@ const { errors } = require('celebrate');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 
-const corsOp = require('./middlewares/cors');
+const cors = require('cors');
 const router = require('./routes/index');
 const handleError = require('./middlewares/errorHandle');
 const {
@@ -19,7 +19,6 @@ require('dotenv').config();
 const { PORT = 3000, MONGO_URL = MONGO_URL_DEV } = process.env;
 
 const app = express();
-app.use(corsOp);
 
 async function main() {
   await mongoose.connect(MONGO_URL);
@@ -28,6 +27,8 @@ async function main() {
   await app.listen(PORT);
   console.log(`Server listen on ${PORT}`);
 }
+main();
+app.use(cors());
 app.use(helmet());
 app.use(requestLogger);
 app.use(bodyParser.json());
@@ -47,4 +48,4 @@ app.use((err, req, res, next) => {
   console.error(err);
   handleError(err, res, next);
 });
-main();
+
